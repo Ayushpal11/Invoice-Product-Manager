@@ -1,0 +1,118 @@
+/* Body and HTML Gradient */
+body,
+html {
+  font-size: 0.9rem;
+  background: linear-gradient(135deg, #fbc2eb 100%); /* Keep original gradient */
+  color: #fff;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body,
+html,
+#root,
+.App {
+  min-height: 100vh;
+}
+
+/* Sidebar-specific adjustments */
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, #2d2b42 100%); /* Keep original sidebar colors */
+  color: #000000;
+  padding: 20px 0;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar text and links */
+.sidebar h5 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #000000; /* Ensure white text remains visible */
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: #8b7ab5; /* Keep sidebar link colors */
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 6px;
+}
+
+.sidebar-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #626161;
+}
+
+.sidebar-link.active {
+  background: rgba(255, 255, 255, 0.3);
+  color: #8b7ab5;
+  font-weight: bold;
+}
+
+/* Main content wrapper */
+.content {
+  padding: 20px;
+  margin-left: 240px; /* Adjust content to account for sidebar width */
+  flex-grow: 1;
+  background: transparent; /* No additional background to ensure consistency */
+}
+
+/* Form controls */
+.form-control {
+  background: rgba(255, 255, 255, 0.1);
+  font-weight: 400;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  color: #000000;
+  border-radius: 8px;
+  transition: background 0.2s ease-in-out;
+}
+
+.form-control:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.3);
+  outline: none;
+}
+
+/* Button styles */
+.btn {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.66rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, #d6cbf1 0%, #fbc2eb 100%); /* Keep original button gradient */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Card and modal consistency */
+.modal-content,
+.card {
+  overflow: hidden;
+  border-radius: 0.756rem;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
